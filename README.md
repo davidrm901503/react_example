@@ -2,11 +2,14 @@ Este proyecto fue generado utilizando [Create React App](https://github.com/face
 
 
 
-## Instalacion 
+## Instalación 
 
-Instalar la ultima version de node
+Instalar la ultima version de node 
+
 Clonar el repositorio https://github.com/davidrm901503/react_example.git
-Ejecutar el comando npm install para instalar las dependencias
-Ejecutar npm start 
+
+Ejecutar el comando "npm install" para instalar las dependencias
+
+Ejecutar "npm start" para iniciar la app
 
 
