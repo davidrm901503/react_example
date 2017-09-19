@@ -1,21 +1,60 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/bootstrap.css';
-import {  BrowserRouter as Router,  Route,  Redirect} from 'react-router-dom'
-import Main from './components/Main';
-import Otro from './components/Otro';
+import NavBar from './components/NavBar'
 import registerServiceWorker from './registerServiceWorker';
+
+var companyTitle= "Titulo";
+var navBarItems=[
+  {
+    titulo:"Menu 1",
+    href:"#"
+  },
+  {
+    titulo:"Menu 2",
+    href:"#"
+  },
+  {
+    titulo:"Drop1 Down",
+    href:"#",
+    submenu:[
+      {
+        titulo:"Menu 1",
+        href:"#"
+      },
+      {
+        titulo:"Menu 2",
+        href:"#"
+      }
+    ]
+  }
+];
+var navBarItemsRight=[
+  {
+    titulo:"Menu 1",
+    href:"#"
+  },  
+  {
+    titulo:"Drop1 Down",
+    href:"#",
+    submenu:[
+      {
+        titulo:"Menu 1",
+        href:"#"
+      },
+      {
+        titulo:"Menu 2",
+        href:"#"
+      }
+    ]
+  }
+]
 
 
 ReactDOM.render(
-  <Router basename="/">
-    <div>
-      <Redirect to="/home" />
-      <Route path="/home" component={Main} />
-      <Route path="/otro" component={Otro} />
-    </div>
-  </Router>,
-  document.getElementById('root'));
+  <NavBar bgColor="black" colorLink="white" title={companyTitle} data = {navBarItems} data_r = {navBarItemsRight} >
+  
+  </NavBar>,document.getElementById('root')
+);
 
 registerServiceWorker();
 

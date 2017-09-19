@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
+import SingleItem from './SingleItem'
+import DropItem from './DropItem'
 
 class RightSide extends Component {
+ 
   render() {
-    return (
+
+    var createItems= function(item,index){
     
-      <div className="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-      <div className="list-group">
-        <a href="#" className="list-group-item active">Header</a>
-        <a href="#" className="list-group-item">Link</a>
-        <a href="#" className="list-group-item">Link</a>
-        <a href="#" className="list-group-item">Link</a>
-      </div>
-    </div>
+     if (item.submenu){
+      return <DropItem key={item.titulo + index} title= {item.titulo}  data = {item.submenu}/>
+     }
+     else{
+      return <SingleItem key={item.titulo + index} title= {item.titulo} href={item.href}/>
+    }     
+  };
+    return (
+      <ul className="nav navbar-nav navbar-right">    
+        {this.props.data.map(createItems)}
+      </ul>
     );
   }
 }
-export default RightSide;
 
+export default RightSide;

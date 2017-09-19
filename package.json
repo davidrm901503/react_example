@@ -6,9 +6,11 @@
     "html-to-react-loader": "^1.0.0-alpha.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.12"
+    "react-scripts": "1.0.12",
+    "redux": "^3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -16,6 +18,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  
   "devDependencies": {
     "react-pure-html-component-loader": "^1.0.1",
     "webpack": "^3.5.5"
