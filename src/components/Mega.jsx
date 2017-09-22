@@ -21,7 +21,7 @@ class Mega extends Component {
       return React.cloneElement(child, {visible: this.state.toogleChildren ? "block": "none"});
   });
      return <li >
-              <a href="#">{this.props.title} <span onClick = {this.toogleChildren.bind(this)} className="indicator">+</span></a>
+              <a href="#">{this.props.title} <span onClick = {this.toogleChildren.bind(this)} className="indicator">{this.props.simbolo}</span></a>
               {childWithProp}
             </li>
           }

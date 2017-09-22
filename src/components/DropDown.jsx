@@ -30,7 +30,7 @@ import React, { Component } from 'react';
     }
     return <li >
             <a href="#">{this.props.title}
-              <span onClick = {this.viewChildrens.bind(this)} className="indicator">+</span>
+              <span onClick = {this.viewChildrens.bind(this)} className="indicator">{this.props.simbolo}</span>
               </a>
             <ul className="dropdown" style = {styles}>
               {this.props.children}

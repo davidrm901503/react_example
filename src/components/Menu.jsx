@@ -66,7 +66,7 @@ class Menu extends Component {
                 <a href="javascript:void(0)" className="showhide" onClick={this.handlershowMobileButton.bind(this)}><em></em><em></em><em></em></a>
                 <a href="#" className="menurc-brand">{this.props.name}</a>
                 <ul className="menurc-menu" style = {styles}>
-                    <Mega title="Mega" >
+                    <Mega simbolo ={this.props.options.simbolo} title="Mega" >
                       <MegaItem tipo="megamenu-quarter-width">
                         <MegaCol tipo="col6">
                           <ul>
@@ -81,7 +81,7 @@ class Menu extends Component {
                         </MegaCol >
                       </MegaItem >
                     </Mega>
-                    <DropDown  title="Dropdown" >
+                    <DropDown simbolo ={this.props.options.simbolo}  title="Dropdown" >
                         <Link  title="link 1" href = "javascript:void(0)" />
                         <Link  title="link 2" href = "javascript:void(0)" >
 
@@ -92,7 +92,7 @@ class Menu extends Component {
                     </DropDown>
 
 
-                    <Mega title="Mega 2" >
+                    <Mega simbolo ={this.props.options.simbolo} title="Mega 2" >
                       <MegaItem tipo="megamenu-half-width">
                         <MegaCol tipo="col12">
                           <ul>
@@ -104,7 +104,7 @@ class Menu extends Component {
 
                     <Link  title="link 1" href = "javascript:void(0)" />
 
-                    <Mega title="Mega" >
+                    <Mega simbolo ={this.props.options.simbolo} title="Mega" >
                       <MegaItem tipo="megamenu-quarter-width">
                         <MegaCol tipo="col6">
                           <ul>

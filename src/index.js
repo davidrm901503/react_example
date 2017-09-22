@@ -7,10 +7,11 @@ import registerServiceWorker from './registerServiceWorker';
 
 var options = {
     background: "black",
-    themeColor:"blue",
+    themeColor: "blue",
+    simbolo: "+"
 }
 ReactDOM.render(
-    <MyMenu  name="Name" options ={options} >
+    < MyMenu name = "Name"options = { options } >
 
     </MyMenu>,document.getElementById('root')
 );
@@ -33,7 +34,7 @@ function run() {
             if (el.parentNode.offsetLeft + el.offsetWidth > menu_width)
                 el.style.right = '0';
             else {
-                if (menu_width == el.offsetWidth || (menu_width -el.offsetWidth) < 20)
+                if (menu_width == el.offsetWidth || (menu_width - el.offsetWidth) < 20)
                     el.style.left = '0px';
                 if (el.parentNode.offsetLeft + el.offsetWidth < menu_width)
                     el.style.right = 'auto';
@@ -44,6 +45,7 @@ function run() {
     }
 
 }
+
 function resize() {
     // variables
     var container = document.getElementById('menurc');
@@ -66,5 +68,5 @@ if (document.readyState != 'loading') run();
 else if (document.addEventListener) document.addEventListener('DOMContentLoaded', run);
 // IE <= 8
 else document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') run();
-    });
+    if (document.readyState == 'complete') run();
+});
