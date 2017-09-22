@@ -29,7 +29,7 @@ import React, { Component } from 'react';
       display:this.state.viewChildrens ? "block" : "none "
     }
     return <li >
-            <a href="#">{this.props.title} 
+            <a href="#">{this.props.title}
               <span onClick = {this.viewChildrens.bind(this)} className="indicator">+</span>
               </a>
             <ul className="dropdown" style = {styles}>

@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 var classNames = require('classnames');
 class MegaItem extends Component {
-  constructor(props) {
-      super(props);
-  }
-  
+
   render() {
     const classes = {};
     classes["megamenu"] = true;  
