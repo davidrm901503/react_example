@@ -41,6 +41,7 @@ class NavBar extends Component {
        <li className="active"><a href="">Link <span className="sr-only">(current)</span></a></li>
        {this.props.data.map(createItems)}
       </ul>
+     
       <RightSide data = {this.props.data_r}/>
     </div>
   </div>
