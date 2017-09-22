@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Menu from './components/Menu'
+import MyMenu from './components/Menu'
 
 
 import registerServiceWorker from './registerServiceWorker';
 
 var options = {
-    background: "black"
+    background: "black",
+    themeColor:"blue",
 }
 ReactDOM.render(
-    <Menu  name="Name" options ={options} >
+    <MyMenu  name="Name" options ={options} >
 
-    </Menu>,document.getElementById('root')
+    </MyMenu>,document.getElementById('root')
 );
 
 registerServiceWorker();

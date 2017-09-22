@@ -4,6 +4,9 @@ import  MegaItem from './MegaItem'
 import  MegaCol from './MegaCol'
 import  Link from './Link'
 import  DropDown from './DropDown'
+var classNames = require('classnames');
+
+
 
 class Menu extends Component {
     constructor(props) {
@@ -49,10 +52,17 @@ class Menu extends Component {
   }
     
     render() {
+        const classes = {};
+        classes["menurc"] = true;
+        classes["menurc-responsive"] = true;
+        classes[this.props.options.themeColor] = true;
+        const attrs = {
+            className: classNames(classes)
+        };
       var styles ={
         display:this.state.showMobileButton ? "none" : "block"
       }
-          return <div id="menurc" className="menurc menurc-responsive" >
+          return <div id="menurc" {...attrs} >
                 <a href="javascript:void(0)" className="showhide" onClick={this.handlershowMobileButton.bind(this)}><em></em><em></em><em></em></a>
                 <a href="#" className="menurc-brand">{this.props.name}</a>
                 <ul className="menurc-menu" style = {styles}>
